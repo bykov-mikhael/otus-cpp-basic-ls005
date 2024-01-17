@@ -1,11 +1,12 @@
-cmake_minimum_required(VERSION 3.0.0)
-project(otus-cpp-basic-ls005 VERSION 0.1.0 LANGUAGES C CXX)
+cmake_minimum_required(VERSION 3.5)
 
-include(CTest)
-enable_testing()
+project(hw-005)
 
-add_executable(otus-cpp-basic-ls005 main.cpp)
+set(SOURCES src/main.cpp)
 
-set(CPACK_PROJECT_NAME ${PROJECT_NAME})
-set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
-include(CPack)
+set(LIB     src/class/IStatistics.h)
+
+add_executable(hw-005   ${SOURCES})
+
+set_target_properties(hw-005 PROPERTIES     CXX_STANDARD 17
+                                            CXX_STANDARD_REQUIRED ON)
