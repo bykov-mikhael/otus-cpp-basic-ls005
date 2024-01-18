@@ -64,7 +64,7 @@ int main() {
 			statistics[i]->update(val);
 		}
 	}
-		
+			
 	// Handle invalid input data
 	if (!std::cin.eof() && !std::cin.good()) {
 		std::cerr << "Invalid input data\n";
