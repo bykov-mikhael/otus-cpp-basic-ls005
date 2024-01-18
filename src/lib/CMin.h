@@ -1,7 +1,6 @@
 #pragma once
 
 #include <limits>
-#include <iostream>
 
 class CMin : public IStatistics {
 public:

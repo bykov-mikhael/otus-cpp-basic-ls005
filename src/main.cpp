@@ -33,19 +33,19 @@
 
 #include <iostream>
 
-#include "class/IStatistics.h"
+#include "lib/IStatistics.h"
 //Минимальное значение
-#include "class/CMin.h"
+#include "lib/CMin.h"
 //Максимальное значение
-#include "class/CMax.h"
+#include "lib/CMax.h"
 //Среднее значение
-#include "class/CMean.h"
+#include "lib/CMean.h"
 //Дисперсия
-#include "class/CStd.h"
+#include "lib/CStd.h"
 //Процентиль 90%
-#include "class/CPct90.h"
+#include "lib/CPct90.h"
 //процентиль 95%
-#include "class/CPct95.h"
+#include "lib/CPct95.h"
 
 int main() {
 

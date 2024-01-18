@@ -2,26 +2,26 @@
 
 #include <limits>
 
-class CMean : public IStatistics {
+class CMax : public IStatistics {
 public:
-	CMean() : m_min{std::numeric_limits<double>::min()} {
+	CMax() : m_max{std::numeric_limits<double>::min()} {
 	}
 
 	void update(double next) override {
-		if (next < m_min) {
-			m_min = next;
+		if (next > m_max) {
+			m_max = next;
 		}
 	}
 
 	double eval() const override {
-		return m_min;
+		return m_max;
 	}
 
 	const char * name() const override {
-		return "min";
+		return "max";
 	}
 
 private:
-	double m_min;
+	double m_max;
 };
 

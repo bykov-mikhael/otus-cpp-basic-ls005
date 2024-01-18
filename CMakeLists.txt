@@ -4,7 +4,7 @@ project(hw-005)
 
 set(SOURCES src/main.cpp)
 
-set(LIB     src/class/IStatistics.h)
+set(LIB     src/lib/IStatistics.h)
 
 add_executable(hw-005   ${SOURCES})
 
