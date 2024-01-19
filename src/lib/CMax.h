@@ -1,6 +1,7 @@
 #pragma once
 
 #include <limits>
+#include "IStatistics.h"
 
 class CMax : public IStatistics {
 public:

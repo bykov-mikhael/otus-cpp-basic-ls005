@@ -1,6 +1,7 @@
 #pragma once
 
 #include <limits>
+#include "IStatistics.h"
 
 class CPct90 : public IStatistics {
 public:

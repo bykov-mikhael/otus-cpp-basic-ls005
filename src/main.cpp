@@ -40,7 +40,7 @@
 #include "lib/CMax.h"
 //Среднее значение
 #include "lib/CMean.h"
-//Дисперсия
+//Средне квадратичное отклонение
 #include "lib/CStd.h"
 //Процентиль 90%
 #include "lib/CPct90.h"

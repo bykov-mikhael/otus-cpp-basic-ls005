@@ -1,6 +1,7 @@
 #pragma once
 
 #include <limits>
+#include "IStatistics.h"
 
 class CMin : public IStatistics {
 public:

@@ -1,5 +1,4 @@
-#include <iostream>
-#include <limits>
+#pragma once
 
 class IStatistics {
 public:
