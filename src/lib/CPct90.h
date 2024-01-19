@@ -5,24 +5,23 @@
 
 class CPct90 : public IStatistics {
 public:
-	CPct90() : m_min{std::numeric_limits<double>::min()} {
+	CPct90() : m_pct90{std::numeric_limits<double>::min()} {
 	}
 
 	void update(double next) override {
-		if (next < m_min) {
-			m_min = next;
-		}
+		m_sum = m_sum + next;
 	}
 
 	double eval() const override {
-		return m_min;
+		return 90*(m_sum+1)/100;
 	}
 
 	const char * name() const override {
-		return "min";
+		return "pct90";
 	}
 
 private:
-	double m_min;
+	double m_sum;
+	double m_pct90;
 };
 
