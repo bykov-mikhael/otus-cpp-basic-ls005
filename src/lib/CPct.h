@@ -4,7 +4,7 @@
 #include "IStatistics.h"
 
 /**
- * ! переделать формулу перцентиля
+ * ! переделать формулу перцентиля опциональное задание
 */
 
 class CPct : public IStatistics {
