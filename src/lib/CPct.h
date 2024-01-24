@@ -24,4 +24,3 @@ private:
 	double m_sum;
 	double m_pct;
 };
-

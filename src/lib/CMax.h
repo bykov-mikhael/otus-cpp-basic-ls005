@@ -25,4 +25,3 @@ public:
 private:
 	double m_max;
 };
-

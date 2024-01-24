@@ -28,4 +28,3 @@ private:
 	double m_mean;
 	double m_count = 0;
 };
-

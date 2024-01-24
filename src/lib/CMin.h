@@ -28,4 +28,3 @@ public:
 private:
 	double m_min;
 };
-
