@@ -3,9 +3,9 @@
 #include <limits>
 #include "IStatistics.h"
 
-class CPct90 : public IStatistics {
+class CPct : public IStatistics {
 public:
-	CPct90() : m_pct90{std::numeric_limits<double>::min()} {
+	CPct(double pct) : m_pct{pct} {
 	}
 
 	void update(double next) override {
@@ -22,6 +22,6 @@ public:
 
 private:
 	double m_sum;
-	double m_pct90;
+	double m_pct;
 };
 

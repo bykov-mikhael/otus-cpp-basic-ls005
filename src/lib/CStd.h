@@ -4,6 +4,7 @@
 #include <cstddef>
 #include <limits>
 #include <vector>
+#include <numeric>
 
 #include "IStatistics.h"
 
@@ -14,18 +15,16 @@ public:
 
 	void update(double next) override {
 		m_val.push_back(next);
-		m_mean = m_mean + next;
-		m_count++;
 	}
 
 	double eval() const override {
+		double m_val_avg = std::accumulate(m_val.begin(), m_val.end(), 0) / m_val.size();
 		double dd = 0;
-
-		for (size_t i=0; i<m_val.size(); i++) {
-			dd = std::pow(m_val[i] - m_mean, 2) + dd; 
+		for (size_t i=0; i<m_val.size()-1; i++) {
+			dd = std::pow(m_val[i] - m_val_avg, 2); 
 		}
-		
-		return std::sqrt(dd/(m_count-1));
+
+		return std::sqrt(dd/m_val.size());
 	}
 
 	const char * name() const override {

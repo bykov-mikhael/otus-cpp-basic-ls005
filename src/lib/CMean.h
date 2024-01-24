@@ -1,6 +1,8 @@
 #pragma once
 
 #include <limits>
+#include <vector>
+#include <numeric>
 #include "IStatistics.h"
 
 class CMean : public IStatistics {
@@ -9,12 +11,12 @@ public:
 	}
 
 	void update(double next) override {
-		m_mean = m_mean + next;
-		m_count++;
+		m_val.push_back(next);
 	}
 
 	double eval() const override {
-		return m_mean/m_count;
+		double m_val_avg = std::accumulate(m_val.begin(), m_val.end(), 0);
+		return m_val_avg / m_val.size();
 	}
 
 	const char * name() const override {
@@ -22,6 +24,7 @@ public:
 	}
 
 private:
+	std::vector<double> m_val;
 	double m_mean;
 	double m_count = 0;
 };

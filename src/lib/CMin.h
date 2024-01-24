@@ -2,10 +2,13 @@
 
 #include <limits>
 #include "IStatistics.h"
-
+/**
+ * * Инициализация происходила минимальным значением double. В случае если последовательность была 0+,
+ * * минимальное значение так и оставалось минимальным значением doule
+*/
 class CMin : public IStatistics {
 public:
-	CMin() : m_min{std::numeric_limits<double>::min()} {
+	CMin() : m_min{0} {
 	}
 
 	void update(double next) override {

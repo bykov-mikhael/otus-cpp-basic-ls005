@@ -42,19 +42,17 @@
 //Средне квадратичное отклонение
 #include "lib/CStd.h"
 //Процентиль 90%
-#include "lib/CPct90.h"
-//процентиль 95%
-#include "lib/CPct95.h"
+#include "lib/CPct.h"
 
 int main() {
 
 	const size_t statistics_count = 6;
 	IStatistics *statistics[statistics_count] = {new CMin{},	//минимальное значение
-												 new CMax{},	//максимальное значение
-												 new CMean{},	//среднее значение
-												 new CStd{},	//ср кв отклонение
-												 new CPct90{},	//процентиль 90%
-												 new cPct95{}};	//процентиль 95%
+												 new CMax{},												//максимальное значение
+												 new CMean{},												//среднее значение
+												 new CStd{},												//ср кв отклонение
+												 new CPct{0.9},											//процентиль 90%
+												 new CPct{0.95}};										//процентиль 95%
 
 	double val = 0.0;
 	
