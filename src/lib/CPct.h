@@ -3,6 +3,10 @@
 #include <limits>
 #include "IStatistics.h"
 
+/**
+ * ! переделать формулу перцентиля
+*/
+
 class CPct : public IStatistics {
 public:
 	CPct(double pct) : m_pct{pct} {
