@@ -1,3 +1,7 @@
+#clang
+*.cache*
+*.clang-format
+#cmake (gcc)
 *build*
-
+#vscode
 *vscode*
