@@ -5,10 +5,19 @@
 
 class CMax : public IStatistics {
 public:
-	CMax() : m_max{std::numeric_limits<double>::min()} {
+	CMax() : m_max{0} {
 	}
 
 	void update(double next) override {
+		/**
+		 * Проверка на первое число последовательности. Если первое число последовательно, оно принимается максимальным
+		*/
+		if (m_first)
+		{
+			m_max = next;
+			m_first = false;
+		}
+		
 		if (next > m_max) {
 			m_max = next;
 		}
@@ -24,4 +33,5 @@ public:
 
 private:
 	double m_max;
+	bool m_first = true;
 };

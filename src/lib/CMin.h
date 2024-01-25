@@ -12,6 +12,15 @@ public:
 	}
 
 	void update(double next) override {
+		/**
+		 * Проверка на первое число последовательности. Если первое число последовательно, оно принимается минимальным
+		*/
+		if (m_first)
+		{
+			m_min = next;
+			m_first = false;
+		}
+		
 		if (next < m_min) {
 			m_min = next;
 		}
@@ -27,4 +36,5 @@ public:
 
 private:
 	double m_min;
+	bool m_first = true;
 };
