@@ -20,13 +20,13 @@ public:
 	}
 
 	double eval() const override {
-		// double m_sum = 0;
+		double m_sum = 0;
 		
-		// for (auto &[name, val] : m_data) {
-		// 	std::cout << val << " ";
-  	// }
+		for (auto &[name, val] : m_data) {
+			std::cout << val << " ";
+  	}
 		
-		// std::cout << std::endl;
+		std::cout << std::endl;
 		return {};
 	}
 

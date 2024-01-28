@@ -26,7 +26,7 @@ public:
 			dd += std::pow(i_val - m_val_avg, 2);
 		}
 	// полученный результат делим на кол-во элементов в списке и извлекаем квадратный корень
-		return std::sqrt(dd/(m_val.size() - 1));
+		return std::sqrt(dd/(m_val.size()-1));
 	}
 
 	const std::string name() const override {
