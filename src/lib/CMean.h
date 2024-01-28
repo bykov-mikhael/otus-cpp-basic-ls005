@@ -19,7 +19,7 @@ public:
 		return m_val_avg / m_val.size();
 	}
 
-	const char * name() const override {
+	const std::string name() const override {
 		return "mean";
 	}
 

@@ -27,7 +27,7 @@ public:
 		return m_max;
 	}
 
-	const char * name() const override {
+	const std::string name() const override {
 		return "max";
 	}
 

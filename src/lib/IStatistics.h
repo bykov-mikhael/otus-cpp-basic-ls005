@@ -28,5 +28,5 @@ public:
 
 	virtual void update(double next) = 0;
 	virtual double eval() const = 0;
-	virtual const char * name() const = 0;
+	virtual const std::string name() const = 0;
 };

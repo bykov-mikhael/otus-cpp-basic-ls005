@@ -30,7 +30,7 @@ public:
 		return m_min;
 	}
 
-	const char * name() const override {
+	const std::string name() const override {
 		return "min";
 	}
 

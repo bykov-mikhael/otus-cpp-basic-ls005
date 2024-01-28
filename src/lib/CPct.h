@@ -1,6 +1,9 @@
 #pragma once
 
 #include <limits>
+#include <map>
+#include <iostream>
+
 #include "IStatistics.h"
 
 /**
@@ -13,18 +16,26 @@ public:
 	}
 
 	void update(double next) override {
-		m_sum = m_sum + next;
+		m_data.insert(std::pair(next, next));
 	}
 
 	double eval() const override {
-		return 90*(m_sum+1)/100;
+		// double m_sum = 0;
+		
+		// for (auto &[name, val] : m_data) {
+		// 	std::cout << val << " ";
+  	// }
+		
+		// std::cout << std::endl;
+		return {};
 	}
 
-	const char * name() const override {
-		return "pct90";
+	const std::string name() const override {
+		return "pct" + std::to_string(m_pct);
 	}
 
 private:
-	double m_sum;
+	std::map<double, double, std::less<double>> m_data;
+	size_t m_count = 0;
 	double m_pct;
 };
